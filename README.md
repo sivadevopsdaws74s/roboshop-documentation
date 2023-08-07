@@ -1,6 +1,6 @@
 # roboshop-documentation
 
-Below is the communication between components and dependency.
+Below is the communication between components and dependency. This dependency comes from **Development team**. Architects decide that, DevOps has no scope in this.
 
 ![alt text](roboshop.jpg)
 
@@ -11,7 +11,7 @@ Below is the communication between components and dependency.
 
 ### APP TIER:
 * APP/API Tier is the one which has backend technologies like Java, .NET, Python, Go, Php, etc.
-* Earlier Backend technolgies had servers like tomcat, Jboss, IIS, etc.
+* Earlier Backend technologies had servers like tomcat, Jboss, IIS, etc.
 * Now all backend technologies are coming up with in built servers.
 * Usually API tier should not opened through internet, it should be only accessible through web tier.
 
@@ -20,4 +20,4 @@ Below is the communication between components and dependency.
 * We can use RDBMS like MySQL, MSSQL, Postgress, etc for row and column based data.
 * We can use NoSQL databases like MongoDB for storing the product information.
 * We can use Cache servers like Redis to access the data with lightening speed.
-* We can use MQ Servers like RabbitMQ, ActiveMQ, Kafka, etc for asynchronus communication.
+* We can use MQ Servers like RabbitMQ, ActiveMQ, Kafka, etc for asynchronous communication.
