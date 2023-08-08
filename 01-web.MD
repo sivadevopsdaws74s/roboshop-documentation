@@ -36,7 +36,7 @@ Extract the frontend content.
 
 ```
 cd /usr/share/nginx/html 
-unzip /tmp/frontend.zip
+unzip /tmp/web.zip
 ```
 
 Try to access the nginx service once more over the browser and ensure you get roboshop content.
