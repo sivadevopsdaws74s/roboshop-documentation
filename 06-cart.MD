@@ -29,7 +29,7 @@ mkdir /app
 Download the application code to created app directory.
 
 ```
-url -L -o /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/cart.zip
+url -L -o /tmp/cart.zip https://roboshop-builds.s3.amazonaws.com/cart.zip
 ```
 
 ```
