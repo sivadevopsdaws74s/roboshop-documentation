@@ -1,7 +1,5 @@
 ### Catalogue
-Catalogue is a microservice that is responsible for serving the list of items that displays in roboshop application.
-
-**NOTE:Catalogue is a microservice that is responsible for serving the list of items that displays in roboshop application.**
+Catalogue is a microservice that is responsible for serving the list of products that displays in roboshop application.
 
 Setup NodeJS repos. Vendor is providing a script to setup the repos.
 
@@ -17,7 +15,7 @@ yum install nodejs -y
 
 Configure the application.
 
-Our application developed by the developer of our org and it is not having any RPM software just like other softwares. So we need to configure every step manually
+Our application developed by the developer of our company and it is not having any RPM software just like other softwares. So we need to configure every step manually
 
 Add application User
 
@@ -25,7 +23,7 @@ Add application User
 useradd roboshop
 ```
 
-User roboshop is a function / daemon user to run the application. Apart from that we dont use this user to login to server.
+User roboshop is a function / daemon user to run the application. Apart from that we don't use this user to login to server.
 
 Also, username roboshop has been picked because it more suits to our project name.
 
@@ -34,14 +32,18 @@ We keep application in one standard location. This is a usual practice that runs
 Lets setup an app directory.
 
 ```
-mkdir /app 
+mkdir /app
 ```
 
 Download the application code to created app directory.
 
 ```
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip
+```
+```
 cd /app 
+```
+```
 unzip /tmp/catalogue.zip
 ```
 
@@ -50,7 +52,9 @@ Every application is developed by development team will have some common softwar
 Lets download the dependencies.
 
 ```
-cd /app 
+cd /app
+```
+```
 npm install 
 ```
 
@@ -59,7 +63,7 @@ We need to setup a new service in systemd so systemctl can manage this service
 Setup SystemD Catalogue Service
 
 ```
-/etc/systemd/system/catalogue.service
+vim /etc/systemd/system/catalogue.service
 ```
 
 ```
@@ -86,22 +90,22 @@ systemctl daemon-reload
 Start the service.
 
 ```
-systemctl enable catalogue 
+systemctl enable catalogue
+```
+```
 systemctl start catalogue
 ```
 
-For the application to work fully functional we need to load schema to the Database.
+* For the application to work fully functional we need to load schema to the Database.
+* Schemas are usually part of application code and developer will provide them as part of development.
 
-```
-Schemas are usually part of application code and developer will provide them as part of development.
-```
 
 We need to load the schema. To load schema we need to install mongodb client.
 
 To have it installed we can setup MongoDB repo and install mongodb-client
 
 ```
-/etc/yum.repos.d/mongo.repo
+vim /etc/yum.repos.d/mongo.repo
 ```
 
 ```
