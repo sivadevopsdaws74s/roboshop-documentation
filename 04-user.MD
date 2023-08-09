@@ -3,40 +3,48 @@ User is a microservice that is responsible for User Logins and Registrations Ser
 
 Setup NodeJS repos. Vendor is providing a script to setup the repos.
 
-```curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+```
+curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 ```
 Install NodeJS
 
-```yum install nodejs -y
+```
+yum install nodejs -y
 ```
 
 Configure the application.
 
 Add application User
 
-```useradd roboshop
+```
+useradd roboshop
 ```
 
 Lets setup an app directory.
 
-```mkdir /app
+```
+mkdir /app
 ```
 
 Download the application code to created app directory.
 
-```curl -L -o /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/user.zip
+```
+curl -L -o /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/user.zip
 ```
 
-```cd /app 
 ```
-```unzip /tmp/user.zip
+cd /app 
+```
+```
+unzip /tmp/user.zip
 ```
 
 Every application is developed by development team will have some common softwares that they use as libraries. This application also have the same way of defined dependencies in the application configuration.
 
 Lets download the dependencies.
 
-```cd /app 
+```
+cd /app 
 ```
 ```
 npm install 
@@ -46,7 +54,8 @@ We need to setup a new service in systemd so systemctl can manage this service
 
 Setup SystemD User Service
 
-```vim /etc/systemd/system/user.service
+```
+vim /etc/systemd/system/user.service
 ```
 
 ```
@@ -66,12 +75,15 @@ WantedBy=multi-user.target
 
 Load the service.
 
-```systemctl daemon-reload
+```
+systemctl daemon-reload
 ```
 
-```systemctl enable user 
 ```
-```systemctl start user
+systemctl enable user 
+```
+```
+systemctl start user
 ```
 
 For the application to work fully functional we need to load schema to the Database. Then
