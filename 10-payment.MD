@@ -12,6 +12,10 @@ Configure the application.
 
 Add application User
 
+```
+useradd roboshop
+```
+
 Lets setup an app directory.
 
 ```
