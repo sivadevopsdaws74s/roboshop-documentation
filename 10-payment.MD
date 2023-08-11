@@ -25,7 +25,7 @@ mkdir /app
 Download the application code to created app directory.
 
 ```
-curl -L -o /tmp/payment.zip https://roboshop-artifacts.s3.amazonaws.com/payment.zip
+curl -L -o /tmp/payment.zip https://roboshop-builds.s3.amazonaws.com/payment.zip
 ```
 
 ```
