@@ -45,6 +45,10 @@ We need to setup a new service in systemd so systemctl can manage this service
 Setup SystemD Dispatch Service
 
 ```
+vim /etc/systemd/system/dispatch.service
+```
+
+```
 [Unit]
 Description = Dispatch Service
 [Service]
